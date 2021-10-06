@@ -4,6 +4,14 @@ import anime from "animejs";
 const Hero = (): JSX.Element => {
   const [slogan, setSlogan] = useState("Web Design");
   useEffect(() => {
+    anime.set(`.${classes.mainContent}`,{
+        display:'none'
+    })
+    const mainTextAnimation = anime({
+        targets:[`.${classes.mainContent} h2`,`.${classes.mainContent} p`],
+        opacity:[0,1],
+        autoplay:false
+    })
     const timeLine = anime.timeline({
       easing: "easeInOutQuad",
     });
@@ -25,6 +33,15 @@ const Hero = (): JSX.Element => {
         width: "390px",
         height: "390px",
         duration: 700,
+        complete:()=>{
+            anime.set(`.${classes.animation}`,{
+                display:'none'
+            })
+            anime.set(`.${classes.mainContent}`,{
+                display:'block'
+            })
+            mainTextAnimation.play()
+        }
       },
       "+=1000"
     );
@@ -66,11 +83,18 @@ const Hero = (): JSX.Element => {
   }, []);
   return (
     <div className={classes.hero}>
-      {/* <div className={classes.animation}>
+      <div className={classes.animation}>
         <div className={classes.grayArea}></div>
         <h2>{slogan}</h2>
-      </div> */}
-      <div></div>
+      </div>
+      <div className={classes.mainContent}>
+        <div className={classes.contetTitle}></div>
+        <h2>WE DESIGN YOUR BUSINESS</h2>
+        <p>
+          Stand out online with a professional website, online store, or
+          portfolio. With Squarespace, you can turn any idea into a reality.
+        </p>
+      </div>
     </div>
   );
 };

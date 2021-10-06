@@ -1,4 +1,15 @@
-
+@font-face {
+    font-family: mavan;
+    src: url(../public/fonts/MavenPro-Regular.ttf);
+}
+@font-face {
+    font-family: mavan-bold;
+    src: url(../public/fonts/MavenPro-Bold.ttf);
+}
+@font-face {
+    font-family: LuckiestGuy;
+    src: url(../public/fonts/LuckiestGuy-Regular.ttf);
+}
 body{
     background-color: #161616;
     margin: 0;
@@ -8,5 +19,5 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    font-family: mavan;
 }

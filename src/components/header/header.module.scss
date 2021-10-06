@@ -3,15 +3,17 @@
     height: 100px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    font-size: 24px;
+    justify-content: space-around;
     align-items: center;
     &__logo{
+        width: 30%;
         h2{
             color: white;
         }
     }
     nav {
-        width: 40%;
+        width: 30%;
         ul {
             display: flex;
             justify-content: space-around;
