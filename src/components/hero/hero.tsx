@@ -4,14 +4,24 @@ import anime from "animejs";
 const Hero = (): JSX.Element => {
   const [slogan, setSlogan] = useState("Web Design");
   useEffect(() => {
-    anime.set(`.${classes.mainContent}`,{
-        display:'none'
-    })
+    anime.set(`.${classes.mainContent}`, {
+      display: "none",
+    });
+    anime.set(`body`, {
+      maxHeight: "100vh",
+      overflow: "hidden",
+    });
     const mainTextAnimation = anime({
-        targets:[`.${classes.mainContent} h2`,`.${classes.mainContent} p`],
-        opacity:[0,1],
-        autoplay:false
-    })
+      targets: [`.${classes.mainContent} h2`, `.${classes.mainContent} p`],
+      opacity: [0, 1],
+      autoplay: false,
+      complete: () => {
+        anime.set(`body`, {
+          maxHeight: "unset",
+          overflow: "auto",
+        });
+      },
+    });
     const timeLine = anime.timeline({
       easing: "easeInOutQuad",
     });
@@ -33,15 +43,15 @@ const Hero = (): JSX.Element => {
         width: "390px",
         height: "390px",
         duration: 700,
-        complete:()=>{
-            anime.set(`.${classes.animation}`,{
-                display:'none'
-            })
-            anime.set(`.${classes.mainContent}`,{
-                display:'block'
-            })
-            mainTextAnimation.play()
-        }
+        complete: () => {
+          anime.set(`.${classes.animation}`, {
+            display: "none",
+          });
+          anime.set(`.${classes.mainContent}`, {
+            display: "block",
+          });
+          mainTextAnimation.play();
+        },
       },
       "+=1000"
     );
