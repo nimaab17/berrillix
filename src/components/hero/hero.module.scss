@@ -1,4 +1,37 @@
-.hero{
-    background-color: aqua;
-    height: 100vh;
+.hero {
+
+    width: 100%;
+    height: calc(100vh - 100px);
+
+    .animation {
+        background-color: aqua;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .grayArea {
+            width: 0px;
+            height: 0px;
+            z-index: 1;
+            background-color: #161616;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h2 {
+            opacity: 0;
+            font-size: 80px;
+            color: aliceblue;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: 0 0;
+        }
+    }
 }
