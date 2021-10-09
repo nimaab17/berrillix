@@ -36,7 +36,7 @@ const Header = (): JSX.Element => {
       </div>
       <nav>
         <ul>
-          {menuLinks.map((item)=><li><a href={item.link}>{item.text}</a></li>)}
+          {menuLinks.map((item)=><li><button className={classes.menuBtn}>{item.text}</button></li>)}
         </ul>
       </nav>
     </header>

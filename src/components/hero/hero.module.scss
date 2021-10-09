@@ -4,8 +4,8 @@
     height: calc(100vh - 100px);
 
     .mainContent {
-        width: 900px;
-        height: 80%;
+        width: 100%;
+        height: 90%;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -34,8 +34,8 @@
         }
         .contetTitle {
             border: 5px solid aqua;
-            width: 400px;
-            height: 400px;
+            width: 370px;
+            height: 370px;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -51,7 +51,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
+        z-index: 3;
         .grayArea {
             width: 0px;
             height: 0px;
@@ -73,5 +73,42 @@
             transform: translate(-50%, -50%);
             transform-origin: 0 0;
         }
+    }
+}
+@media only screen and (max-width: 1264px){
+    .hero {
+        .mainContent {
+            h2{
+                font-size: 60px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 960px){
+    .hero {
+        .mainContent {
+            
+        width: 100% !important;
+            .contetTitle {
+                width: 300px;
+                height: 300px;
+            }
+            h2{
+                font-size: 40px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+
+    }
+}
+@media only screen and (max-width: 600px){
+    .hero {
+        
+
     }
 }

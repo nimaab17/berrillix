@@ -4,29 +4,97 @@
     width: 100%;
     display: flex;
     font-size: 24px;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    &__logo{
-        width: 30%;
-        h2{
+
+    &__logo {
+        width: 20%;
+        margin-left: 30px;
+        h2 {
             color: white;
         }
     }
+
     nav {
-        width: 30%;
+        width: 40%;
+        z-index: 2;
         ul {
             display: flex;
             justify-content: space-around;
             align-items: center;
             height: 100%;
-            li{
+
+            li {
                 list-style-type: none;
-                a{
+
+                a {
                     text-decoration: none;
                     color: white;
-                    
+
+                }
+
+                .menuBtn {
+                    background-color: transparent;
+                    border: none;
+                    color: #ffffff;
+                    cursor: pointer;
+                    display: inline-block;
+                    font-size: 16px;
+                    margin-right: 5px;
+                    outline: none;
+                    padding:5px;
+                    position: relative;
+                    text-transform: uppercase;
+                
+
+                }
+                .menuBtn:before,:after {
+                    border-color: transparent;
+                    transition: all 0.25s;
+                    border-style: solid;
+                    border-width: 0;
+                    content: "";
+                    height: 24px;
+                    position: absolute;
+                    width:0px;
+                }
+                .menuBtn:before {
+                    border-color: aqua;
+                    border-top-width: 2px;
+                    left: 0px;
+                    top: -5px;
+                }
+
+                .menuBtn:after {
+                    border-bottom-width: 2px;
+                    border-color: aqua;
+                    bottom: -5px;
+                    right: 0px;
+                }
+                .menuBtn:hover:before,
+                .menuBtn.hover:before,
+                .menuBtn:hover:after,
+                .menuBtn.hover:after {
+                    height: 100%;
+                    width: 100%;
                 }
             }
         }
     }
 }
+
+@media only screen and (max-width: 1264px) {
+    .header {
+        &__logo {
+            margin-left: 30px;
+        }
+
+        nav {
+            width: 50%;
+            margin-right: 30px;
+            font-size: 18px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {}

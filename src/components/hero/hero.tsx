@@ -29,8 +29,8 @@ const Hero = (): JSX.Element => {
       {
         duration: 1500,
         targets: `.${classes.animation}`,
-        width: "400px",
-        height: "400px",
+        width: "370px",
+        height: "370px",
         translateX: ["-50%", "-50%"],
         translateY: ["-50%", "-50%"],
         rotate: "45deg",
@@ -40,8 +40,8 @@ const Hero = (): JSX.Element => {
     timeLine.add(
       {
         targets: `.${classes.grayArea}`,
-        width: "390px",
-        height: "390px",
+        width: "360px",
+        height: "360px",
         duration: 700,
         complete: () => {
           anime.set(`.${classes.animation}`, {

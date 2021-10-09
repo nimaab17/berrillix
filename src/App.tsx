@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
-      <div>
+      {/* <div>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident eos<br/>
         facilis quisquam. Modi adipisci ut reprehenderit quibusdam amet debitis<br/>
         necessitatibus omnis dignissimos laborum. Sapiente nisi dolorum rem<br/>
@@ -52,7 +52,7 @@ function App() {
         facilis quisquam. Modi adipisci ut reprehenderit quibusdam amet debitis<br/>
         necessitatibus omnis dignissimos laborum. Sapiente nisi dolorum rem<br/>
         repellendus, quidem voluptate!<br/>
-      </div>
+      </div> */}
     </div>
   );
 }
