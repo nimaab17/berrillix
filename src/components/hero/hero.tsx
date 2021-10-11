@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import classes from "./hero.module.scss";
 import anime from "animejs";
 const Hero = (): JSX.Element => {
-  const [slogan, setSlogan] = useState("Web Design");
+  const [slogan, setSlogan] = useState("SEO");
+  window.scrollTo(0,0)
   useEffect(() => {
     anime.set(`.${classes.mainContent}`, {
       display: "none",
     });
+    
     anime.set(`body`, {
       maxHeight: "100vh",
       overflow: "hidden",
@@ -70,7 +72,7 @@ const Hero = (): JSX.Element => {
     textTimeline.add({
       opacity: "1",
       begin: () => {
-        setSlogan("Seo");
+        setSlogan("Digital Marketing");
       },
     });
     textTimeline.add({
@@ -85,7 +87,7 @@ const Hero = (): JSX.Element => {
       {
         opacity: "1",
         begin: () => {
-          setSlogan("Digital Marketing");
+          setSlogan("Web Design");
         },
       },
       "+=1000"
